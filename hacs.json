@@ -1,0 +1,10 @@
+{
+  "name": "Glance Clock",
+  "content_in_root": false,
+  "country": "US",
+  "domain": "glanceclock",
+  "homeassistant": "2021.1.5",
+  "iot_class": "local_polling",
+  "filename": "custom_components/glanceclock/manifest.json",
+  "render_readme": true
+}
