@@ -163,3 +163,4 @@ cython_debug/
 __pycache__/
 .DS_Store
 venv/
+custom_components/.idea

@@ -2,8 +2,8 @@
     "domain": "glanceclock",
     "name": "Glance Clock",
     "version": "0.1",
-    "documentation": "https://github.com/yourusername/ha_glanceclock",
+    "documentation": "https://github.com/dkramarc/ha_glanceclock",
     "requirements": ["bleak==0.12.0"],
     "dependencies": [],
-    "codeowners": ["@yourusername"]
+    "codeowners": ["@dkramarc"]
 }
