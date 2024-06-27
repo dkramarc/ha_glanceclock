@@ -3,7 +3,7 @@
     "name": "Glance Clock",
     "version": "0.1",
     "documentation": "https://github.com/dkramarc/ha_glanceclock",
-    "requirements": ["bleak==0.12.0"],
-    "dependencies": [],
-    "codeowners": ["@dkramarc"]
+    "dependencies": ["bluetooth"],
+    "codeowners": ["@dkramarc"],
+    "config_flow": true
 }
