@@ -1,0 +1,19 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure Glance Clock",
+        "description": "Select a Glance Clock device to configure.",
+        "data": {
+          "device": "Device"
+        },
+        "errors": {
+          "no_devices_found": "No GlanceClock devices found. Please put it in pairing mode by holding the power button for a few seconds."
+        }
+      }
+    },
+    "abort": {
+      "no_devices_found": "No GlanceClock devices found. Please put it in pairing mode by holding the power button for a few seconds."
+    }
+  }
+}

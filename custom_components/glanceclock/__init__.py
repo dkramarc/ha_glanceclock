@@ -1,31 +1,22 @@
-"""Glance Clock integration."""
+import logging
 
-from .time_date import update_time_date
-import homeassistant.helpers.config_validation as cv
-import voluptuous as vol
+from homeassistant.helpers import config_entry_flow
 
-DOMAIN = "glanceclock"
+from .const import DOMAIN
 
-CONFIG_SCHEMA = vol.Schema(
-    {
-        DOMAIN: vol.Schema(
-            {
-                vol.Required("device"): cv.string,
-            }
-        )
-    },
-    extra=vol.ALLOW_EXTRA,
-)
+_LOGGER = logging.getLogger(__name__)
 
-async def async_setup(hass, config):
-    """Set up the Glance Clock component."""
+async def async_setup_entry(hass, config_entry):
+    """Set up GlanceClock from a config entry."""
+    hass.data.setdefault(DOMAIN, {})
 
-    device_address = config[DOMAIN]["device"]
+    # Forward the setup to the sensor platform.
+    hass.async_create_task(
+        hass.config_entries.async_forward_entry_setup(config_entry, "sensor")
+    )
+    return True
 
-    async def handle_update_time(call):
-        """Handle the service call to update time."""
-        await update_time_date(hass, device_address)
-
-    hass.services.async_register(DOMAIN, "update_time", handle_update_time)
-
+async def async_unload_entry(hass, config_entry):
+    """Unload a config entry."""
+    await hass.config_entries.async_forward_entry_unload(config_entry, "sensor")
     return True

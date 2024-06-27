@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message Settings {
+  string current_time = 1;
+  // Add other fields as necessary
+}
