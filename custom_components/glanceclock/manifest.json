@@ -1,7 +1,7 @@
 {
     "domain": "glanceclock",
     "name": "Glance Clock",
-    "version": "0.1",
+    "version": "0.2",
     "documentation": "https://github.com/dkramarc/ha_glanceclock",
     "dependencies": ["bluetooth"],
     "codeowners": ["@dkramarc"],
